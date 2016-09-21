@@ -1,34 +1,25 @@
  //declare bacteria variables here   
- Bacteria bob = new Bacteria();
- Bacteria ned = new Bacteria();
- Bacteria ted = new Bacteria();
- Bacteria bed = new Bacteria();
- Bacteria qed = new Bacteria();
- Bacteria wed = new Bacteria();
+ Bacteria[] bob;
+ 
  void setup()   
  {     
  	size(500,500);  
  	frameRate(10000);
  	background(255);
+ 	bob = new Bacteria[6];
+for(int i = 0; i < bob.length; i++)
+ {
+ 	bob[i] = new Bacteria();
+ }
+
  }   
  void draw()   
  {   
- 	
- 	bob.walk();
- 	bob.show();
- 	ned.walk();
- 	ned.show();
- 	ted.walk();
- 	ted.show();
- 	bed.walk();
- 	bed.show();
-    qed.walk();
- 	qed.show();
- 	wed.walk();
- 	wed.show();
-
- 	
-   
+ 	for( int i = 0; i < bob.length; i++ )
+ 	{
+ 		bob[i].walk();
+ 		bob[i].show();
+ 	}
    
  }  
  class Bacteria    
@@ -52,3 +43,25 @@
  	ellipse(myX, myY, 10, 10);
  }
  }
+
+ // Bacteria ned = new Bacteria();
+ // Bacteria ted = new Bacteria();
+ // Bacteria bed = new Bacteria();
+ // Bacteria qed = new Bacteria();
+ // Bacteria wed = new Bacteria();
+
+  // 	bob.walk();
+ 	// bob.show();
+ 	// ned.walk();
+ 	// ned.show();
+ 	// ted.walk();
+ 	// ted.show();
+ 	// bed.walk();
+ 	// bed.show();
+  //   qed.walk();
+ 	// qed.show();
+ 	// wed.walk();
+ 	// wed.show();
+
+ 	
+  //  
